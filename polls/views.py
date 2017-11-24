@@ -1,6 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import loader
 
+from .models import Question
+
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_dae')[:5]
     template = loader.get_template('polls/index.html')
