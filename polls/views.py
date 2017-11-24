@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import loader
 
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_dae')[:5]
